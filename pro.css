@@ -1,0 +1,259 @@
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+html {
+  background-image: url(IMGS/anh-background-dong-don-gian_032845592.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  padding: 0px 10px;
+}
+
+h1 {
+  color: transparent;
+  text-align: center;
+  background-image: linear-gradient(
+    to right,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  padding: 10px 0px;
+}
+.center {
+  color: white;
+  text-align: center;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+.text-center {
+  text-align: center;
+}
+
+/* form */
+.form_center {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.form_group {
+  position: relative;
+  /*
+  justify-content: center;
+  text-align: center;
+  align-items: center; */
+  padding: 15px 30% 5px 30%;
+}
+.form_input {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  border-bottom: 2px solid #9b9b9b;
+  font-size: 20px;
+  height: 30px;
+  padding: 0px 5px 0px 0px;
+  background-color: transparent;
+  transition: 0.5s ease;
+  color: white;
+}
+.form_label {
+  position: absolute;
+  font-size: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 30%;
+  cursor: text;
+  color: #9b9b9b;
+  transition: 0.5s ease;
+}
+.form_input:focus {
+  border-width: 3px;
+  border-image: linear-gradient(to right, #11998e, #38ef7d);
+  border-image-slice: 1;
+}
+.form_input:focus + .form_label {
+  top: 0;
+  font-size: 15px;
+  color: #11998e;
+}
+.form_input:not(:placeholder-shown) + .form_label {
+  top: 0;
+  font-size: 15px;
+}
+
+/* button enter */
+#btn-enter {
+  width: 160px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  margin: 20px;
+  height: 55px;
+  text-align: center;
+  border: none;
+  background-size: 300% 100%;
+  border-radius: 50px;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+#btn-enter:hover {
+  background-position: 100% 0;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+#btn-enter:focus {
+  outline: none;
+}
+
+#btn-enter {
+  background-image: linear-gradient(
+    to right,
+    #25aae1,
+    #4481eb,
+    #04befe,
+    #3f86ed
+  );
+  box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
+}
+/* end button enter */
+
+table {
+  width: 100%;
+  border-color: aliceblue;
+}
+tr {
+  color: white;
+}
+th {
+  color: white;
+  width: 14%;
+}
+table tr th:nth-child(2) {
+  width: 30%;
+}
+
+#btn-xd {
+  font-weight: bold;
+  color: white;
+  background-color: #4c4c4c;
+  padding: 10px;
+}
+.btn-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+/* button average */
+.btn1 {
+  background-image: linear-gradient(135deg, #008aff, #86d472);
+  border-radius: 6px;
+  box-sizing: border-box;
+  color: #ffffff;
+  display: block;
+  height: 50px;
+  font-size: 1.4em;
+  font-weight: 600;
+  padding: 4px;
+  position: relative;
+  text-decoration: none;
+  /* width: 7em; */
+  z-index: 2;
+  margin: 5px;
+}
+.btn1:hover {
+  color: #fff;
+}
+.btn1 #btn-avg,
+.btn1 #btn-xd {
+  border-width: 0px;
+  color: white;
+  font-weight: bold;
+  align-items: center;
+  background: #0e0e10;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  transition: background 0.5s ease;
+  width: 100%;
+  padding: 10px;
+}
+.btn1:hover #btn-avg,
+.btn1:hover #btn-xd {
+  background: transparent;
+}
+
+/*animation*/
+.loading {
+  display: flex;
+  padding: 20px;
+  /* width: 100%; */
+  /* height: 100px; */
+  justify-content: center;
+  align-items: center;
+  animation: loading 2s infinite;
+}
+
+.item {
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+  border: 3px solid red;
+  border-right: 3px solid blue;
+  border-left: 3px solid lime;
+  border-image-slice: 1;
+  padding: 15px;
+  margin: 0px 5px;
+  box-shadow: 2px 2px 60px 2px blue;
+  animation: xoay 0.5s infinite linear;
+}
+
+@keyframes loading {
+  50% {
+    transform: rotate(200deg);
+  }
+  75% {
+    transform: rotate(160deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes xoay {
+  to {
+    transform: rotate(360deg);
+  }
+}
+footer {
+  position: relative;
+  width: 100%;
+  height: 100px;
+}
+.foot {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.alert {
+  color: red;
+  padding-bottom: 5px;
+  font-weight: bold;
+}

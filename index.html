@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="pro.css">
+  <title>PROJECT_2</title>
+</head>
+<body>
+  <h1>Class Markesheet</h1>
+  <!-- form iput -->
+  <form class='form_center'>
+    <!-- input username -->
+    <div class="form_group">
+      <input type="text" id="lbl_name" class='form_input' placeholder=' '>
+      <label for="lbl_name" class='form_label'>Họ tên </label>
+    </div>
+    <p id="alertName" class='alert'></p>
+    <!-- input math -->
+    <div class="form_group">
+      <input type="number" id="lbl_math" step="0.1" class='form_input' placeholder=' '>
+      <label for="lbl_math" class='form_label'>Điểm toán </label>
+    </div>
+    <p id="alertMath" class='alert'></p>
+    <!-- input physical -->
+    <div class="form_group">
+      <input type="number" id="lbl_physical" step="0.1" class='form_input' placeholder=' '>
+      <label for="lbl_physical" class='form_label'>Điểm lý </label>
+    </div>
+    <p id="alertPhysical" class='alert'></p>
+    <!-- input chemistry -->
+    <div class="form_group">
+      <input type="number" id="lbl_chemistry" step="0.1" class='form_input' placeholder=' '>
+      <label for="lbl_chemistry" class='form_label'>Điểm hóa </label>
+    </div>
+    <p id="alertChemistry" class='alert'></p>
+    <!-- button enter -->
+    <div  class="center">
+      <button type="button" id="btn-enter" class="btn0" onclick="enter()">Nhập</button>
+    </div>
+  </form>
+  <!-- end form -->
+
+  <!-- table information -->
+  <table border="1" cellspacing="0" cellpadding="10" id="myTable">
+    <tr>
+      <th>STT</th>
+      <th>Họ tên</th>
+      <th>Toán</th>
+      <th>Lý</th>
+      <th>Hóa</th>
+      <th>Trung bình</th>
+    </tr>
+    <!-- <tbody>
+
+    </tbody> -->
+  </table>
+  <!-- input button information -->
+  <div class="btn-center">
+    <span class="btn1">
+    <button type="button" id="btn-avg" onclick="average()">Tính điểm trung bình</button>
+  </span>
+  <span class="btn1">
+    <button type="button" id="btn-xd" onclick="classify()">Xác định học sinh giỏi</button>
+  </span>
+  </div>
+  <footer>
+    <div class="foot">
+      <div class="loading">
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+    </div>
+
+  </footer>
+
+
+
+  <script src="main.js"></script>
+</body>
+</html>
